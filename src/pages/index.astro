@@ -4,8 +4,9 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title='ASTRO TINY PROJECTS'>
   <main>
-    <nav>
+    <nav class="border">
       <a href='texto3d/'>3D Text</a>
+      <a href='whereIssAt/'>Where ISS At</a>
     </nav>
   </main>
 </Layout>
@@ -15,5 +16,11 @@ import Layout from '../layouts/Layout.astro';
     margin-top: 2rem;
     max-width: 950px;
     margin-inline: auto;
+  }
+  nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
   }
 </style>

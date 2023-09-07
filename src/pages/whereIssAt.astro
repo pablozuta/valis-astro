@@ -1,0 +1,107 @@
+---
+import IssImage from '../images/ISS.jpg';
+---
+
+<script>
+  getISS();
+  async function getISS() {
+    const URL_ISS = 'https://api.wheretheiss.at/v1/satellites/25544';
+    const response = await fetch(URL_ISS);
+    const data = await response.json();
+    console.log(data);
+
+    document.getElementById(
+      'root'
+    ).innerHTML = `Name: ${data.name.toUpperCase()}`;
+    document.getElementById(
+      'altitude'
+    ).innerHTML = `Altitude: ${data.altitude}`;
+    document.getElementById(
+      'velocity'
+    ).innerHTML = `Velocity: ${data.velocity}`;
+    document.getElementById(
+      'visibility'
+    ).innerHTML = `Visibility: ${data.visibility.toUpperCase()}`;
+  }
+</script>
+
+<main>
+  <h1>Where is The ISS?</h1>
+  <h3 id='root'></h3>
+  <h3 id='altitude'></h3>
+  <h3 id='velocity'></h3>
+  <h3 id='visibility'></h3>
+
+  <div class='container'>
+    <img src={IssImage} alt='ISS space station' />
+  </div>
+
+  <p>
+    The International Space Station (ISS) is the largest modular space station
+    currently in low Earth orbit. It is a multinational collaborative project
+    involving five participating space agencies: NASA (United States), Roscosmos
+    (Russia), JAXA (Japan), ESA (Europe), and CSA (Canada).The ownership and use
+    of the space station is established by intergovernmental treaties and
+    agreements.The station serves as a microgravity and space environment
+    research laboratory in which scientific research is conducted in
+    astrobiology, astronomy, meteorology, physics, and other fields.The ISS is
+    suited for testing the spacecraft systems and equipment required for
+    possible future long-duration missions to the Moon and Mars.
+  </p>
+  <p>
+    The project, which began as an American effort, was long delayed by funding
+    and technical problems. Originally called Freedom in the 1980s by U.S. Pres.
+    Ronald Reagan, who authorized the National Aeronautics and Space
+    Administration (NASA) to build it within 10 years, it was redesigned in the
+    1990s to reduce costs and expand international involvement, at which time it
+    was renamed. In 1993 the United States and Russia agreed to merge their
+    separate space station plans into a single facility, integrating their
+    respective modules and incorporating contributions from the European Space
+    Agency (ESA) and Japan.
+  </p>
+  <p>
+    The ISS became fully operational in May 2009 when it began hosting a
+    six-person crew; this required two Soyuz lifeboats to be docked with the ISS
+    at all times. The six-person crew typically consisted of three Russians, two
+    Americans, and one astronaut from either Japan, Canada, or the ESA. An
+    external platform was attached to the far end of Kibo in July, and a Russian
+    docking port and airlock, Poisk, was attached to the Zvezda module in
+    November. A third node, Tranquility, was installed in 2010, and mounted on
+    this was a cupola, whose robotic workstation and many windows enabled
+    astronauts to supervise external operations.
+  </p>
+  <p></p>
+</main>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,800;1,200&display=swap');
+
+  main {
+    font-family: 'Poppins', sans-serif;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  h1 {
+    color: hotpink;
+    font-size: 5rem;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  p {
+    margin-bottom: 0.5%;
+    max-width: 50ch;
+    padding-right: 2rem;
+    border-right: solid 3px pink;
+    
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    
+  }
+</style>
