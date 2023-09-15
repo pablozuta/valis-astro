@@ -1,0 +1,51 @@
+<main>
+  <header>
+    <center>
+      <h1>ANGLE BACKGROUND</h1>
+    </center>
+  </header>
+
+  <div class='quote'>
+    <p>
+      Case had never seen him wear the same suit twice, although his wardrobe
+      seemed to consist entirely of meticulous reconstructions of garments of
+      the cars floor. Hed fallen face forward on a slab of soggy chip board, he
+      rolled over, into the nearest door and watched the other passengers as he
+      rode.
+    </p>
+  </div>
+</main>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,800;1,200&display=swap');
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: #41ade5;
+    font-size: 1.3rem;
+  }
+
+  .quote {
+    margin-top: 2rem;
+    background: #41ade5;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+    padding-inline: 20%;
+  }
+  .quote:after {
+    background: inherit;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-1deg);
+    transform-origin: 100%;
+    z-index: -1;
+  }
+</style>
