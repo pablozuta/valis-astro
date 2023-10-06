@@ -1,0 +1,87 @@
+---
+import MyriamImage from './images-animated-cards/myriam.jpg';
+import BrookeImage from './images-animated-cards/brooke.jpg';
+---
+
+<main>
+  <header>
+    <h1>Animated Cards</h1>
+  </header>
+
+  <div class='container-cards'>
+    <div class='card'>
+      <img src={MyriamImage} alt='' />
+      <h4>How Computers Work</h4>
+      <p>
+        Light from a service hatch at the rear of the spherical chamber. That
+        was Wintermute, manipulating the lock the way it had manipulated the
+        drone micro and the chassis of a gutted game console.
+      </p>
+    </div>
+
+    <div class='card'>
+      <img src={BrookeImage} alt='' />
+      <h4>Planning for Teams</h4>
+      <p>
+        The Tessier-Ashpool ice shattered, peeling away from the missionaries,
+        the train reached Case’s station. Case had never seen him wear the same
+        suit twice, although his wardrobe seemed to consist entirely of
+        meticulous reconstruction’s of garments of the bright void beyond the
+        chain link.
+      </p>
+    </div>
+  </div>
+</main>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,800;1,200&display=swap');
+
+  main {
+    font-family: 'Poppins', sans-serif;
+    background-color: wheat;
+    color: coral;
+    font-size: 1.1rem;
+  }
+  header {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  p {
+    color: black;
+  }
+
+  .container-cards {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  @media (max-width: 900px) {
+    .container-cards {
+      flex-direction: column;
+    }
+  }
+  .card {
+    text-align: center;
+    border-radius: 5px;
+    padding: 0.6rem;
+    height: max-content;
+    width: 320px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-left: 3rem;
+    transition: all 0.8s;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    color: peru;
+    cursor: pointer;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+</style>
